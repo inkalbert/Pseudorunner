@@ -135,3 +135,20 @@ function handleIndentation(event) {
  
 // Attach the handlers to the textarea
 document.getElementById('inputBox').addEventListener('keydown', handleIndentation);
+
+
+function updateLineNumbers() {
+    const inputBox = document.getElementById('inputBox');
+    const lineNumbers = document.getElementById('lineNumbers');
+    const lines = inputBox.value.split('\n');
+    lineNumbers.innerHTML = lines.map((_, i) => '<div>' + (i + 1) + '</div>').join('');
+}
+
+// Add event listeners for input and scroll
+inputBox.addEventListener('input', updateLineNumbers);
+inputBox.addEventListener('scroll', () => {
+    document.getElementById('lineNumbers').scrollTop = inputBox.scrollTop;
+});
+
+// Initial line number update
+updateLineNumbers();
