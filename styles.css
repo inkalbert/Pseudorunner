@@ -8,68 +8,87 @@ body {
     height: 100vh;
 }
 
-.main-container{
+.main-container {
     display: flex;
     flex-direction: column;
     width: 80%;
-    position:relative;
-    left:-50px;
-    height:100vh;
+    position: relative;
+    left: 0;
+    height: 100vh;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    position:relative;
-    left:0px;
-    top:-9px;
+    position: relative;
     width: 100%;
-    height: 720px;
-    max-width: 1200px;
+    height: 90vh;
+    max-width: none;
     border: 1.5px solid #c6d0d8;
     border-radius: 0px;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
-textarea {
-    width: 100%;
-    height: 300px;
-    resize: vertical;
-    overflow-y: auto;
-    margin-bottom: 10px;
+.line-numbers {
+    line-height: 21px;
+    padding: 0 5px 0 0;
 }
 
 h1 {
-    top: 0;
     text-align: center;
     color: #2e2a2a;
 }
 
 .textboxes {
     display: flex;
+    width: 100%;
 }
 
 .textbox {
-    width: 50%;
+    width: 100%;
     padding: 9px;
-    position:relative;
-    left:0px;
-    top:0px;
     border: none;
     outline: none;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
 }
 
+.input-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.line-numbers {
+    background-color: #e3e6e8;
+    color: #6e7681;
+    line-height: 9px;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    text-align: right;
+    overflow-y: hidden;
+    padding-right: 5px;
+    width: 40px;
+}
+
 .input-box {
+    flex-grow: 1;
     background-color: #f3f6f9;
     color: #2e3135;
     border: 1px solid #c6d0d8;
     border-radius: 8px;
     position: relative;
-    height: 610px;
-    left: -4px;
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    height: 100%;
+    width: 100%;
+    padding: 9px 12px;
+    margin-left: -1px;
+    overflow-y: auto;
+    line-height: 21px;
+}
+
+.line-numbers {
+    line-height: 21px;
+    padding: 9px 10px 9px 0;
 }
 
 .output-box {
@@ -78,7 +97,6 @@ h1 {
     border: 1px solid #c6d0d8;
     border-radius: 8px;
     position: relative;
-    height: 610px;
     left: 3px;
     width: 50%;
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
